@@ -1,0 +1,54 @@
+Data source (student's name),Sex,Age,Lifestyle,Dsitance at which ticking was last heard  (cm) by R ear,Dsitance at which ticking was first heard  (cm) by R ear,Dsitance at which ticking was last heard  (cm) by L ear,Dsitance at which ticking was first heard  (cm) by L ear,Left,Right,Above,Behind,Infront
+"Mejias, Mafe Nenia",F,21,mildly active,48.5,20,30,25,left,right,left,behind,right
+"Perez, Maria Cristina",F,21,mildly active,46,26.5,53,31,left,right,behind,above,infront
+"Tadle, Antonette",F,20,mildly active,59,30,51,24,left,right,above,behind,infront
+"Antasuda, Princess ",F,21,mildly active,62,30,85,45,left,right,above,behind,infront
+"Flores, Camille",F,21,mildly active,65,50,68,42,left,right,above,behind,right
+"Lano, Caren Nicole",F,21,mildly active,58,45,71,60,left,right,above,above,infront
+"Tse, Jepoy",M,21,Sedentary,102,76,121,75,Left,Right,Above,Above,Infront
+"Angelia, Eisen",M,21,Active,92,68,88,70,left,Right,Above,behind,Infront
+"Atabay, Nathaly",F,21,mildly active,80,60,60,82,left,right,above,behind,infront
+"Relator, Jefferlyn",F,20,mildly active,70,80,60,70,left,right,above,behind,infront
+"Dajao, Fraelou",F,22,sedentary,49,39,66,60,left,right,behind,above,infront
+"Villanueva, Zennoe Zabdiel",M,23,mildly active,50,45,60,56,left,right,above,behind,infront
+"Saxton, Kenneth Francis ",M,23,sedentary,60,85,73,75,left,right,left,behind,left
+"Garay, Fulgent Fave",M,21,mildly active,90,86,93,100,left,right,above,behind,infront
+"Castañares, Ann Louise",F,22,mildly active,27,32,40,47,left,right,above,behind,above
+"Ermunda, Apple Mae",F,21,mildly active,18,15,17.5,12,left,right,above,behind,right
+"Ambrad, Kimberly T.",F,21,mildly active,62,50,50,45,left,right,infront,behind,above
+"Cena, Hannah Trisha A.",F,21,active,80,66,70,60,left,right,behind,behind,above
+"Tan, Eaunice A.",F,20,mildly active,70,35,46,21,left,right,above,behind,above
+"Heje, Erich Joshua",M,21,mildly active,84,43,63,26,left,right,above,behind,infront
+"Fernandez, Kissabel",F,22,sedentary,20,20,20,19,left,right,above,behind,in front
+"Decoy, Minette Stella",F,21,mildly active,23,30,12,16,left,right,behind,behind,above
+"Tagle, Finn ",M,21,mildly active,14,17,12.5,8,left,right,infront,left,above
+"Tomales, Theresa",F,21,sedentary,58,42,61,37,left,right,above,behind,in front
+"Cardino, Charisse",F,21,sedentary,62,48,63,43,left,right,above,behind,in front
+"Lara, Maria Camille",F,22,active,18,15,20,15,left,right,above,behind,behind
+"Badana, Hannah May",F,23,mildly active,84,56,58,45,left,right,back,behind,infront
+"Taneo, Shannen Jane",F,22,semi-active,27,14,42,15,left,right,above,right,left
+"Reyes, Kaila Adelaide",F,21,mildly active,32,30,42,27,left,right,front,front,infront
+"Comendador, Ghea Marie",F,21,mildly active,27,45,35,49,left,right,above,behind,infront
+"Villiarin, Jemerie Dale",M,21,mildly active,28,18,38,20,left,right,behind,behind,infront
+"Rasuman, Mohammad Yassin",M,21,mildly active,41,18,51,23,left,right,left,behind,infront
+"Agan, Pherean Wayne L.",M,22,active,103,60,69,58,left,right,above,behind ,infront
+"Poliquit, Maria Alexandra G.",F,21,mildly active,79,56,78,48,left,right,above,behind,infront
+"Rivera, Ristelle Louise S.",F,20,mildly active,45,31,37,22,left,right,above,behind,infront
+"Toledo, Grace Ann A.",F,20,mildly active,75,64,75,52,left,right,above,behind,infront
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+"Lopez, Adrian Joshua E.",M,21,active,38,23,43,28,left,right,right,behind,infront
+"Espinosa, Mike Fernz R.",M,21,mildly active,59.8,85.1,94,54.9,left,right,behind,above,infront
+"Madrid, Hewlett Xyrine B. ",F,21,mildly active,63.6,34.9,87.8,52.9,left ,right ,behind ,behind ,behind
+"Gorduiz, Alexis Marie G.",F,21,mildly active,48,55,42,53,left,right,above,above,above
+"Bagariano, Jonathan",M,,,35,46,48,66,left,right,behind,behind,above
+"Lapinid, Walter G.",M,22,midly active,38,33,36,24,left,right,behind,behind,infront
+"Ano-os, Louise M.",M,20,mildly active,72,98,127,94,left,right,behind,behind,infront
+"Tobias, Mik Carmeli P. ",F,21,mildly active,63,59,49,68,left,right,behind,behind,behind
+"Cabrido, John Gumer O.",M,21,mildly active,136,120,111,105,left,right,behind,behind,infront
+"Saycon, Dee Arr Jean P.",F,21,mildly active,80,40,76,48.5,left,right,above,behind,infront
+"Suson, Mary Antonnete V.",F,21,mildly active,67,43.5,67,36.5,left,right,above,behind,above
+"Casicas, Cyrah Ma. Fatima J.",F,21,mildly active,75,33,84,49,left ,right,above,behind,infront
+"Amores, Kristine Juliane T.",F,19,mildly active,58,37.5,57,35,left,right,above ,behind,infront
+"Quimno, Mariene Joyce",F,21,mildly active,43,36.5,55,33.5,left,right,above ,behind,infront

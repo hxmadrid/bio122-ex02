@@ -1,0 +1,307 @@
+---
+title: "Laboratory Exercise 2"
+author: "Espinosa & Madrid"
+date: "`r Sys.Date()`"
+output: pdf_document
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(warning = FALSE, message = FALSE)
+
+```
+
+```{r}
+
+library(tidyverse)
+library(ggpubr)
+library(reshape2)
+library(car)
+library(rstatix)
+library(cowplot)
+
+```
+
+# VISION
+```{r}
+
+#  imports data
+vis <- read.csv("C:/Users/Xyrine/Documents/School Stuff/BS BIO 4th Year/1st Semester/BIO 118/Module 1/Module 1 - Laboratory Exercise/bio118-class/exercises/bio122-ex02/data/vision.csv")
+
+```
+
+```{r}
+
+#  organizes data
+vis.eye <- vis %>%
+  filter(!row_number() %in% c(1, 2, 39)) %>%
+  mutate(VisualAcuity = map_dbl(X.4, ~eval(parse(text = .x)))) %>%
+  select(X, X.1, VisualAcuity)
+
+# renames columns
+colnames(vis.eye) <- c("Names", "Sex", "VisualAcuity")
+
+# renames rows
+vis.eye$Sex[vis.eye$Sex == "F"] <- "Female"
+vis.eye$Sex[vis.eye$Sex == "M"] <- "Male"
+
+
+```
+
+```{r}
+
+#  prints summary of data
+group_by(vis.eye, Sex) %>%
+  summarise(
+    count = n(),
+    mean = mean(VisualAcuity, na.rm = TRUE),
+    sd = sd(VisualAcuity, na.rm = TRUE)
+  )
+
+```
+
+
+## Plots
+```{r}
+
+#  generates box plot
+visplot <- ggplot(vis.eye, aes(x = Sex, y = VisualAcuity)) + 
+  geom_boxplot() + 
+  ylab("Visual Acuity")
+
+#  saves .png of plot
+ggsave("C:/Users/Xyrine/Documents/School Stuff/BS BIO 4th Year/1st Semester/BIO 118/Module 1/Module 1 - Laboratory Exercise/bio118-class/exercises/bio122-ex02/plots/visplot.png")
+
+```
+
+## T-test
+```{r}
+
+#  Shapiro-Wilk normality test 
+shapiro.test(vis.eye$VisualAcuity[vis.eye$Sex == "Female"]) # p < 0.05
+shapiro.test(vis.eye$VisualAcuity[vis.eye$Sex == "Male"]) # p < 0.05
+
+#  QQ 
+ggqqplot(vis.eye$VisualAcuity[vis.eye$Sex == "Male"])
+ggqqplot(vis.eye$VisualAcuity[vis.eye$Sex == "Female"])
+
+
+#  homoscedasticity
+leveneTest(VisualAcuity ~ Sex, vis.eye) 
+# p > 0.05
+# accept null hypothesis that variances between two groups are not
+##significantly different
+# assume homoscedasticity 
+
+
+t.test(VisualAcuity ~ Sex, data = vis.eye, alternative = "two.sided", var.equal = TRUE)
+# p < 0.05
+# Reject Ho; there is a significant difference between male and female vision acuity
+
+
+```
+
+
+
+# AUDITORY
+```{r}
+
+#  imports data
+ear <- read.csv("C:/Users/Xyrine/Documents/School Stuff/BS BIO 4th Year/1st Semester/BIO 118/Module 1/Module 1 - Laboratory Exercise/bio118-class/exercises/bio122-ex02/data/hear.csv")
+
+```
+
+```{r}
+
+#  organizes data
+ear.lr <- ear %>%
+  select(1,2,5,6,7,8) %>%
+  na.omit()
+  
+#  changes column names
+colnames(ear.lr) <- c("Names", "Sex", "Away.Right", "Towards.Right", 
+                      "Away.Left", "Towards.Left")
+
+#  changes row names
+ear.lr$Sex[ear.lr$Sex == "F"] <- "Female"
+ear.lr$Sex[ear.lr$Sex == "M"] <- "Male"
+
+ear.lr <- ear.lr[c(1, 2, 3, 5, 4, 6)]
+
+```
+
+
+## T-test
+```{r}
+
+#  summarizes data
+group_by(vis.eye, Sex) %>%
+  summarise(
+    count = n(),
+    mean = mean(VisualAcuity, na.rm = TRUE),
+    sd = sd(VisualAcuity, na.rm = TRUE)
+  )
+
+```
+
+### Plots
+```{r}
+
+#  box plot for right ear away
+r.away <- ggplot(ear.lr, aes(x = Sex, y = Away.Right)) + 
+  geom_boxplot() + 
+  ggtitle("a") +
+  ylab("Ticking last heard by right ear (cm)") + 
+  theme(axis.title.y = element_text(size = 8))
+
+#  box plot for left ear away
+l.away <- ggplot(ear.lr, aes(x = Sex, y = Away.Left)) + 
+  geom_boxplot() +
+  ggtitle("b") +
+  ylab("Ticking last heard by left ear (cm)") + 
+  theme(axis.title.y = element_text(size = 8))
+
+#  box plot for right ear towards
+r.towards <- ggplot(ear.lr, aes(x = Sex, y = Towards.Right)) + 
+  geom_boxplot() +
+  ggtitle("c") +
+  ylab("Ticking first heard by right ear (cm)") + 
+  theme(axis.title.y = element_text(size = 8))
+
+#  box plot for left ear towards
+l.towards <- ggplot(ear.lr, aes(x = Sex, y = Towards.Left)) + 
+  geom_boxplot() +
+  ggtitle("d") +
+  ylab("Ticking first heard by left ear (cm)") + 
+  theme(axis.title.y = element_text(size = 8))
+
+#  arranges plots into grid
+hearing <- plot_grid(r.away, l.away, r.towards, l.towards)
+
+hearing
+
+#  saves .png of plots
+ggsave("C:/Users/Xyrine/Documents/School Stuff/BS BIO 4th Year/1st Semester/BIO 118/Module 1/Module 1 - Laboratory Exercise/bio118-class/exercises/bio122-ex02/plots/earplot.png")
+
+
+```
+
+
+```{r}
+
+##  Shapiro-Wilk normality test 
+# Away.Right
+shapiro.test(ear.lr$Away.Right[ear.lr$Sex == "Female"]) # p < 0.05; not normal
+shapiro.test(ear.lr$Away.Right[ear.lr$Sex == "Male"]) # p > 0.05; normal
+
+# Away.Left
+shapiro.test(ear.lr$Away.Left[ear.lr$Sex == "Female"]) # p > 0.05; normal
+shapiro.test(ear.lr$Away.Left[ear.lr$Sex == "Male"]) # p > 0.05; normal
+
+# Towards.Right
+shapiro.test(ear.lr$Towards.Right[ear.lr$Sex == "Female"]) # p > 0.05; normal
+shapiro.test(ear.lr$Towards.Right[ear.lr$Sex == "Male"]) # p > 0.05; normal
+
+# Towards.Left
+shapiro.test(ear.lr$Towards.Left[ear.lr$Sex == "Female"]) # p > 0.05; normal
+shapiro.test(ear.lr$Towards.Left[ear.lr$Sex == "Male"]) # p > 0.05; normal
+
+
+##  QQ 
+ggqqplot(ear.lr$Away.Right[ear.lr$Sex == "Male"])
+ggqqplot(ear.lr$Away.Right[ear.lr$Sex == "Female"])
+
+
+#  homoscedasticity
+## Away.Right
+leveneTest(Away.Right ~ Sex, ear.lr) 
+# p < 0.05
+# reject null hypo that variances between two groups are not significantly different
+# assume hetero
+
+## Away.Left
+leveneTest(Away.Left ~ Sex, ear.lr) 
+# p < 0.05
+# reject null hypo that variances between two groups are not significantly different
+# assume hetero
+
+## Towards.Right
+leveneTest(Towards.Right ~ Sex, ear.lr) 
+# p < 0.05
+# reject null hypo that variances between two groups are not significantly different
+# assume hetero
+
+## Towards.Left
+leveneTest(Towards.Left ~ Sex, ear.lr) 
+# p < 0.05
+# reject null hypo that variances between two groups are not significantly different
+# assume hetero
+
+
+## Welch's T-test for non-equal variance
+#Away.Right
+t.test(Away.Right ~ Sex, data = ear.lr, alternative = "two.sided", var.equal = FALSE)
+# p > 0.05
+# Accept; there is no sign diff bet male and female aud. acuity for right away
+
+#Away.Left
+t.test(Away.Left ~ Sex, data = ear.lr, alternative = "two.sided", var.equal = FALSE)
+# p > 0.05
+# Accept; there is no sign diff bet male and female aud. acuity for left away
+
+#Towards.Right
+t.test(Towards.Right ~ Sex, data = ear.lr, alternative = "two.sided", var.equal = FALSE)
+# p > 0.05
+# Accept; there is no sign diff bet male and female aud. acuity for right towards
+
+#Towards.Left
+t.test(Towards.Left ~ Sex, data = ear.lr, alternative = "two.sided", var.equal = FALSE)
+# p > 0.05
+# Accept; there is no sign diff bet male and female aud. acuity for left towards
+
+
+```
+
+
+
+### Organizes data for export
+```{r}
+
+
+library(writexl)
+
+
+ra.ear <- ear.lr %>%
+  select(c(1,2,3)) %>%
+  spread(Sex, Away.Right) %>%
+  select(c(2,3))
+
+write_xlsx(ra.ear, "C:/Users/Xyrine/Documents/School Stuff/BS BIO 4th Year/2nd Semester/BIO 122/lab/Exercise 2/data/iso/ra-ear.xlsx")
+
+la.ear <- ear.lr %>%
+  select(c(1,2,4)) %>%
+  spread(Sex, Away.Left) %>%
+  select(c(2,3))
+
+write_xlsx(la.ear, "C:/Users/Xyrine/Documents/School Stuff/BS BIO 4th Year/2nd Semester/BIO 122/lab/Exercise 2/data/iso/la-ear.xlsx")
+
+rt.ear <- ear.lr %>%
+  select(c(1,2,5)) %>%
+  spread(Sex, Towards.Right) %>%
+  select(c(2,3))
+
+write_xlsx(rt.ear, "C:/Users/Xyrine/Documents/School Stuff/BS BIO 4th Year/2nd Semester/BIO 122/lab/Exercise 2/data/iso/rt-ear.xlsx")
+
+lt.ear <- ear.lr %>%
+  select(c(1,2,6)) %>%
+  spread(Sex, Towards.Left) %>%
+  select(c(2,3))
+
+write_xlsx(lt.ear, "C:/Users/Xyrine/Documents/School Stuff/BS BIO 4th Year/2nd Semester/BIO 122/lab/Exercise 2/data/iso/tl-ear.xlsx")
+
+
+```
+
+
+
+
+

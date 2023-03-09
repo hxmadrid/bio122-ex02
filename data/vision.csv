@@ -1,0 +1,59 @@
+,,,,,,,,,,
+,,,,,,Negative Afterimage,,,,
+Data source (student's name),Sex,Age,Lifestyle,Visual Acuity (V),Test for Color blindness,Red,Yellow,Green,Red on Green ,Blind spot  (d')
+"Mejias, Mafe Nenia",F,21,mildly active,20/200,none,light bluish green,lavender,reddish-purple/fuschia,yellow orange,"right =  6.65
+left = 10.5 "
+"Perez, Maria Cristina",F,21,mildly active,20/25,none,light bluish green,lavender,light pink,yellow orange,"right =  0.29 mm
+left = 0.27 mm"
+"Tadle, Antonette",F,20,mildly active,20/30,none,light bluish green/cyan,lavender,light pink,yellow orange,"R=2.1 mm, L=1.7 mm"
+"Antasuda, Princess ",F,21,mildly active,3/200,not red-green colorblind,light bluish green (1),lavender (1),light pink (1),red orange,R= 5 mm      L=6 mm
+"Flores, Camille",F,21,mildly active,20/25,some form of red-green colorblindness,light bluish green/cyan (2:10),lavender (2:20),reddish (2:40),orange,R=3.06 mm; L=3.27 mm
+"Lano, Caren Nicole",F,21,mildly active,20/25,not red-green colorblind,light bluish green (1:30),lavender (1),reddish (1:30),yellow green,R = 4.41; L = 4.37
+"Angelia, Eisen",M,21,active,20/25,none,light greenish,light violet,light pink,light bluish,R = 0.181                  L = 0.177
+"Tse, Jepoy",M,21,sedentary,20/200,none,light greenish,bluish,red,blue,"R= 4.2
+L= 3.9"
+"Decoy, Minette Stella",F,21,mildly active,20/20,none,bluish,bluish,pinkish,blue circle,R=5.95 mm L=3.4
+"Tagle, Finn ",M,21,mildly active,20/20,none,light green,light purple,pinkish,"blue circle, pink dot at center, pink background",R = 6.46; L = 6.46
+"Dajao, Fraelou",F,22,sedentary,18/20,none,blue,white,light pink,"blue circle, small red circle",
+"Villanueva, Zennoe Zabdiel",M,23,mildly active,20/10,none,none,none,none,"blue circle, pink teardrop at center",
+"Saxton, Kenneth Francis",M,23,sedentary,20/30,none,light bluish green,light purple/dark blue tint,red,"blue circle, reddish background","L = 2.45, R = 2.76"
+"Garay, Fulgent Fave",M,21,mildly active,20/40,none,light bluish green,purple,purple,"green circle, red background","L = 3.16, R = 3.25"
+"Castañares, Ann Louise",F,22,mildly active,20/15,none,light blue,light violet,pinkish,"gray circle, pale red small circle at the center","L = 7.7, R = 7.1"
+"Ermunda, Apple Mae",F,21,mildly active,20/70,none,light green,black,purple,dark gray circle with light gray background,"L = 0.132, R = 0.155"
+"Ambrad, Kimberly T.",F,21,mildly active,20/20,none,light bluish green,white,pinkish violet,"dark blue background, center has a bright color that is somewhat orange-red color","L = 4.42, R = 4.36"
+"Cena, Hannah Trisha A.",F,21,active,20/20,none,light bluish,white,pinkish violet,"blue circle, orange center","L = 4.75, R = 4.14"
+"Tan, Eaunice A.",F,20,mildly active,7/200,none,yellow green,none,light orange,green circle with red background circle,"L = 4.58, R = 4.49"
+"Heje, Erich Joshua",M,21,mildly active,20/20,none,yellow green,none,light orange,green circle with red background circle,"L = 4.86, R = 4.25"
+"Fernandez, Kissabel",F,22,sedentary,20/10,none,light blue green ,light purple,light orange,the inside of the circle turned a dark green color,"L - 150 mm, R - 143 mm"
+"Relator, Jefferlyn B.",F,20,mildly active,20/40,none,grayish violet,light bluish gray,light violet,"dark blue circle, pink square background",L = 80 mm; R = 130 mm
+"Atabay, Nathaly R.",F,21,mildly active,20/50,not red-green colorblind,light violet,light blue-green,light violet,"neon blue circle, fuschia square background",L = 125 mm: R = 145 mm
+"Tomales, Theresa",F,21,sedentary,18/20,none,grayish green,pale gray,very pale pink,"sky blue circle at the center, square background is purple-pink",L= 3.92 R= 3.25
+"Cardino, Charisse",F,21,sedentary,18/40,none,pale green,grayish blue,light pink,"pale blue center, pale pink background",L=3.95; R=3.48
+"Badana, Hannah May",F,23,mildly active,20/200,none,faint green,blue,magenta,"bluish circle, with pinkish square",L= 280mm; R=280mm
+"Lara, Maria Camille",F,22,active,20/40,none,none,none,purple,purple,L=1.92; R= 1.64
+"Taneo, Shannen Jane",F,22,semi-active,20/70,none,faint blue green,none,purple,purple,L = 180mm; R = 160mm
+"Reyes, Kaila Adelaide",F,21,mildly active,20/70,none,cyan,blue,light indigo,cyan,L=40; R= 36
+"Comendador, Ghea Marie",F,21,mildly active,20/25,none,gray,blue,purple,grey,L=45; R=42
+"Villiarin, Jemerie Dale",M,21,mildly active,20/40,none,bluish green/teal,violet,Pink/purple-ish,pink ring,L=301mm; R=345mm
+"Rasuman, Mohammad Yassin",M,21,mildly active,20/10,none,light blue,bluish/near purple,purple,light gray ring,L=330mm; R=355mm
+"Agan, Pherean Wayne L.",M,22,active,18/200,none,blue green,indigo/deep blue,pale red,"pale skyblue, faint red background",L = 450 mm R = 435 mm
+"Poliquit, Maria Alexandra G.",F,21,mildly active,20/100,none,bluish green,blue,pink/reddish,pink outer with bluish circle,"L= 24 cm, R= 23 cm"
+"Rivera, Ristelle Louise S.",F,20,mildly active,20/50,none,green,blue,reddish,pink outer with bluish circle,"L= 29 cm, R= 26 cm"
+"Toledo, Grace Ann A. ",F,20,mildly active,20/40,none,green,blue/near purple,purple,blue orange on the inner,"L= 21 cm, R= 22 cm"
+,,,,,,,,,,
+"Lopez, Adrian Joshua E.",M,21,active,20/10,none,green,blue,violet,Blue,"L=36, R=33.5"
+"Ochea, Zedrich John",M,21,mildly active,20/100,none,light red (almost white),none,light yellow,light pink outer ,"L = 255 mm, R = 200 mm"
+"Amoin, Mary Justine B.",F,20,mildly active,20/10,none,cyan,light blue,light pink/violet,light pink outer ,"L = 300 mm, R = 350 mm"
+"Madrid, Hewlett Xyrine B. ",F,21,mildly active,25/20,none,cyan,indigo,magenta,cyan circle with small white circle at the center,"L = 220mm, R = 200 mm"
+"Espinosa, Mike Fernz R.",M,21,mildly active,25/20,none,light green,indigo,light pink,cyan circle with light blue background,"L = 15.5 cm, R = 17.9 cm"
+"Gorduiz, Alexis Marie G.",F,21,mildly active,20/20,none,light bluish green,lavender,pink/purple,"blue center, pink/purple background","L = 235 mm, R = 255 mm"
+"Bagarinao, Jonathan",M,21,active,20/20,none,light bluish green,blue (near purple),pink/purple,"blue green center, pink background","L = 220 mm, R = 225 mm"
+"Lapinid, Walter G.",M,22,midly active,20/20,none,light bluish green,near purple,pinkish white,skyblue circle with pink square,"L = 64cm, R = 72 cm"
+"Ano-os, Louise M.",M,20,mildly active,20/20,not red-green colorblind,blue-green,purple,purple,circle with no color,"L = 26 cm, R = 27 cm"
+"Tobias, Mik Carmeli P. ",F,21,mildly active,20/25,not red-green colorblind,green,blue,purple,blue circle,"L = 24 cm, R = 22 cm"
+"Cabrido, John Gumer O.",M,21,mildly active,20/10,none,green,blue,violet,blue,"L = 36 c,, R = 33.5"
+"Saycon, Dee Arr Jean P.",F,21,mildly active,20/100,none,pink,grey,yellow green,green circle (blotch),L = 48.5 cm;  R = 40 cm
+"Suson, Mary Antonnnete V.",F,21,mildly active,20/70,,purple,pale blue,blue green,cyan circle (blotch),L = 36.5 cm ; R = 43.5 cm
+"Casicas, Cyrah Ma. Fatima J.",F,21,mildly active,20/25,none,light bluish green,lavender,pinkish white,"blue circle, pink square",L = 25 cm ; R 30 cm
+"Amores, Kristine Juliane T.",F,19,mildly active,7/70,none,red,light blue,green,green,L= 66 cm ; R= 52 cm
+"Quimno, Mariene Joyce",F,21,mildly active,20/50,none,sky blue,pinkish-violet,green,green,L= 56 cm ; R= 48 cm
